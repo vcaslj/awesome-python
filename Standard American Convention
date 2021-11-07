@@ -1,0 +1,22 @@
+n = int(input())
+ns = str(n)
+ns1 = ns
+v = ''
+dlina1 = len(ns1)
+while dlina1 >= 3:
+    dlina1 -= 3
+if len(ns) <= 3:
+    print(n)
+else:
+    dlina = len(ns)
+    for i in range(len(ns)):
+        s = ns[dlina-3:dlina]
+        s = s[::-1]
+        s = s + ','
+        v += s
+        dlina -= 3
+        if dlina <= 0:
+            break
+    v = v[::-1] 
+    nsw = ns1[:dlina1]
+    print(nsw, v[1::], sep='')  
